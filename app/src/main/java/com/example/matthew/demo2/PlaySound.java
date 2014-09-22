@@ -18,6 +18,8 @@ public class PlaySound extends Thread{
     int currentSampleRate = 4000;
 
     public PlaySound (){
+        //Inspiration and Algorithm for this function sourced from:
+        //chushao/virtualpiano/blob/master/src/com/cshao/mus170/virtual/piano/MainActivity.java
         double[] soundSample = new double[numSamples];
         byte[] sound = new byte[2 * numSamples];
 
