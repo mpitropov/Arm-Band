@@ -34,7 +34,10 @@ public class PlaySound extends Thread{
         audio.write(sound, 0, 2000);
 
         setFrequency(100);
-        audio.setLoopPoints (0, 900, -1);//HOW THE FUCK DID THIS HAPPEN?????????????
+        
+        //For some reason, setting the second loop point to more than half of the number of samples
+        //results in no sound.
+        audio.setLoopPoints (0, 900, -1);
     }
 
     public void run(){
